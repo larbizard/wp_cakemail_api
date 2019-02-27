@@ -1,8 +1,9 @@
-Author: Savoir-Faire Linux
-Contributor: Gharib Larbi
-Function: cakemail_api_client
+* Author: Savoir-Faire Linux
+* Contributor: Gharib Larbi
+* Function: cakemail_api_client
+* License: https://opensource.org/licenses/GPL-3.0
 
-How to use:
+* How to use:
 
 1- Contact Cakemail (or one of their distributors ex: Courilleur) and ask for you api_key that is related to you email and password
 
