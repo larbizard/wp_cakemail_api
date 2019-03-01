@@ -45,19 +45,23 @@
 			return "Something went wrong: $error_message";
 		} else {
 			if (isset($result)) {
-				$json_object = json_decode($result[body], true);
-				if ($json_object['status'] == 'success') {
-					foreach($json_object['data'] as $key => $value) {
-						if($key=="count")
-						{
-							return $value;
+				if (array_key_exists('body', $result)) {
+					$json_object = json_decode($result['body'], true);
+					if ($json_object['status'] == 'success') {
+						foreach($json_object['data'] as $key => $value) {
+							if($key=="count")
+							{
+								return $value;
+							}
+							else{
+								return "ERROR no Key count found: " . print_r($result);
+							}
 						}
-						else{
-							return "ERROR no Key count found: " . print_r($result);
-						}
+					} else {
+						return "Curl API Request failed: " . print_r($result);
 					}
-				} else {
-					return "Curl API Request failed: " . print_r($result);
+				}else{
+					return "No key body in result array";
 				}
 			}
 		}
