@@ -1,8 +1,11 @@
 # Informations:
 
 Author: Savoir-Faire Linux
+
 Contributor: Gharib Larbi
+
 Function: cakemail_api_client
+
 License: https://opensource.org/licenses/GPL-3.0
 
 # How to use:
